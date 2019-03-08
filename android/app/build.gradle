@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
     compile project(':appcenter-crashes')
     compile project(':appcenter-analytics')
     compile project(':appcenter')
