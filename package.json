@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "cd Testing && py.test test.py"
   },
   "dependencies": {
     "appcenter": "1.12.2",

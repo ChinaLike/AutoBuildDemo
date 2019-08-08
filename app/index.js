@@ -1,20 +1,37 @@
-import React from 'react'
-import { AppRegistry } from 'react-native'
+// import React from 'react'
+// import { AppRegistry } from 'react-native'
 
-import dva from './utils/dva'
-import Router, { routerMiddleware, routerReducer } from './router'
-import appModel from './models/app'
+// import dva from './utils/dva'
+// import Router, { routerMiddleware, routerReducer } from './router'
+// import appModel from './models/app'
 
-const app = dva({
-  initialState: {},
-  models: [appModel],
-  extraReducers: { router: routerReducer },
-  onAction: [routerMiddleware],
-  onError(e) {
-    console.log('onError', e)
-  },
-})
+// const app = dva({
+//   initialState: {},
+//   models: [appModel],
+//   extraReducers: { router: routerReducer },
+//   onAction: [routerMiddleware],
+//   onError(e) {
+//     console.log('onError', e)
+//   },
+// })
 
-const App = app.start(<Router />)
+// const App = app.start(<Router />)
 
-AppRegistry.registerComponent('DvaStarter', () => App)
+// AppRegistry.registerComponent('DvaStarter', () => App)
+
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+} from 'react-native';
+
+import Login from './containers/Login/index';
+
+export default class DemoTestApp extends Component {
+  render() {
+    return (
+      <Login />
+    );
+  }
+}
+
+AppRegistry.registerComponent('DvaStarter', () => DemoTestApp);
